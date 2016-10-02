@@ -10,9 +10,8 @@ Overview
     * - docs
       - |docs|
     * - tests
-      - | |travis| |requires|
+      - |
         | |codecov|
-        | |landscape|
     * - package
       - |version| |downloads| |wheel| |supported-versions| |supported-implementations|
 
@@ -20,21 +19,9 @@ Overview
     :target: https://readthedocs.org/projects/python-rfcmx
     :alt: Documentation Status
 
-.. |travis| image:: https://travis-ci.org/joyinsky/python-rfcmx.svg?branch=master
-    :alt: Travis-CI Build Status
-    :target: https://travis-ci.org/joyinsky/python-rfcmx
-
-.. |requires| image:: https://requires.io/github/joyinsky/python-rfcmx/requirements.svg?branch=master
-    :alt: Requirements Status
-    :target: https://requires.io/github/joyinsky/python-rfcmx/requirements/?branch=master
-
 .. |codecov| image:: https://codecov.io/github/joyinsky/python-rfcmx/coverage.svg?branch=master
     :alt: Coverage Status
     :target: https://codecov.io/github/joyinsky/python-rfcmx
-
-.. |landscape| image:: https://landscape.io/github/joyinsky/python-rfcmx/master/landscape.svg?style=flat
-    :target: https://landscape.io/github/joyinsky/python-rfcmx/master
-    :alt: Code Quality Status
 
 .. |version| image:: https://img.shields.io/pypi/v/rfcmx.svg?style=flat
     :alt: PyPI Package latest release

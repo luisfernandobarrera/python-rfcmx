@@ -66,6 +66,8 @@ setup(
     ],
     install_requires=[
         'click',
+        'unidecode',
+        'six'
     ],
     extras_require={
         # eg:
