@@ -165,8 +165,8 @@ class RFCValidator(RFCGeneral):
         """
         self.rfc = ''
         if bool(rfc) and isinstance(rfc, string_types):
-            if type(rfc) == str:
-                rfc = rfc.decode('utf-8')
+            # if type(rfc) == str:
+            #    rfc = rfc.decode('utf-8')
             self.rfc = rfc.upper().strip()
             self._general_validation = None
         else:
@@ -440,8 +440,8 @@ class RFCGeneratorUtils(RFCGeneral):
     @staticmethod
     def name_adapter(name, non_strict=False):
         if isinstance(name, string_types):
-            if isinstance(name, str):
-                name = name.decode('utf-8')
+            # if isinstance(name, str):
+            #    name = name.decode('utf-8')
             return name.upper().strip()
         elif non_strict:
             if name is None or not name:
@@ -512,7 +512,7 @@ class RFCGeneratorFisicas(RFCGeneratorUtils):
         extra_letter = False
         clave = []
         clave.append(self.paterno_calculo[0])
-        second_value = filter(lambda x: x >= 0, map(self.paterno_calculo[1:].find, self.vocales))
+        second_value = list(filter(lambda x: x >= 0, map(self.paterno_calculo[1:].find, self.vocales)))
         if len(second_value) > 0:
             clave.append(self.paterno_calculo[min(second_value) + 1])
         else:
@@ -572,5 +572,5 @@ class RFCGeneratorFisicas(RFCGeneratorUtils):
     def homoclave(self):
         cadena = self.cadena_homoclave
         suma = sum(int(cadena[n:n + 2]) * int(cadena[n + 1]) for n in range(len(cadena) - 1)) % 1000
-        resultado = (suma / 34, suma % 34)
+        resultado = (suma // 34, suma % 34)
         return self.homoclave_assign_table[resultado[0]] + self.homoclave_assign_table[resultado[1]]
